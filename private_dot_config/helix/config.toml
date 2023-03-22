@@ -1,0 +1,29 @@
+theme = "tokyonight"
+
+[editor]
+true-color = true
+idle-timeout = 100
+# gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+";" = "command_mode"
+d = ["yank_joined_to_clipboard", "yank", "delete_selection"]
+y = ["yank_joined_to_clipboard", "yank"]
+"C-h" = "jump_view_left"
+"C-j" = "jump_view_down"
+"C-k" = "jump_view_up"
+"C-l" = "jump_view_right"
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.select]
+k = ["extend_line_up", "extend_to_line_bounds"]
+j = ["extend_line_down", "extend_to_line_bounds"]
+

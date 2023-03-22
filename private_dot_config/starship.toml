@@ -1,0 +1,4 @@
+format = "$all"
+
+[character]
+success_symbol = ''
