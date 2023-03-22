@@ -78,7 +78,7 @@ alias zl = zellij
 alias ipy = ipython
 alias j = just
 
-if ("~/.zoxide.nu" | path exists) { source ~/.zoxide.nu }
+source ~/.zoxide.nu  
 
 let-env EDITOR = 'hx'
 let-env PYTHONBREAKPOINT = 'pudb.set_trace'
