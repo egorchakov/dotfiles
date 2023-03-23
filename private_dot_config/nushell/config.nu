@@ -671,3 +671,6 @@ let-env config = {
     }
   ]
 }
+
+source ~/.zoxide.nu
+source ~/.starship.nu
