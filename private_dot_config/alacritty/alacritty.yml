@@ -237,10 +237,11 @@ live_config_reload: true
 # Default:
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
-# shell:
-#   program: /Users/evgenii/.cargo/bin/nu
-#  args:
-#    - --login
+shell:
+  program: /opt/homebrew/bin/nu
+  args:
+    - --config ~/.config/nushell/config.nu
+    - --env-config ~/.config/nushell/env.nu
 
 # Windows 10 ConPTY backend (Windows only)
 #
@@ -253,8 +254,6 @@ live_config_reload: true
 # backend cannot be initialized.
 enable_experimental_conpty_backend: false
 
-# Send ESC (\x1b) before characters when alt is pressed.
-alt_send_esc: false
 
 # Key bindings
 #
