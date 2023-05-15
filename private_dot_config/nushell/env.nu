@@ -34,6 +34,8 @@ let-env PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/
 alias zl = zellij
 alias ipy = ipython
 alias j = just
+alias av = aws-vault
+alias f = xplr
 
 let-env EDITOR = 'hx'
 let-env PYTHONBREAKPOINT = 'pudb.set_trace'
