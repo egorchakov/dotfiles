@@ -238,10 +238,7 @@ live_config_reload: true
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
 shell:
-  program: /Users/evgenii/.cargo/bin/nu
-  args:
-    - --config ~/.config/nushell/config.nu
-    - --env-config ~/.config/nushell/env.nu
+  program: /Users/evgenii/.cargo/bin/zellij
 
 # Windows 10 ConPTY backend (Windows only)
 #
