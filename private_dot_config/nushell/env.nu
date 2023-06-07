@@ -29,7 +29,7 @@ let-env NU_PLUGIN_DIRS = [
 ]
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-let-env PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/.cargo/bin', '~/.pyenv/bin'])
+let-env PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/.cargo/bin', '~/.pyenv/bin', '~/.local/share/fnm', '/usr/local/cuda/bin'])
 
 alias zl = zellij
 alias ipy = ipython
@@ -42,6 +42,10 @@ let-env PYTHONBREAKPOINT = 'pudb.set_trace'
 let-env PYTHON_KEYRING_BACKEND = 'keyring.backends.null.Keyring'
 let-env DOCKER_BUILDKIT = 1
 let-env COMPOSE_DOCKER_CLI_BUILD = 1
+
+load-env (fnm env --shell bash | lines | str replace 'export ' '' | str replace -a '"' '' | split column = | rename name value | where name != "FNM_ARCH" and name != "PATH" | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value })
+
+let-env PATH = ($env.PATH | prepend $"($env.FNM_MULTISHELL_PATH)/bin")
 
 zoxide init nushell | save -f ~/.zoxide.nu
 starship init nu | save -f ~/.starship.nu
