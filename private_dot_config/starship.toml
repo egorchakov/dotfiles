@@ -4,7 +4,8 @@ format = "$all"
 success_symbol = ''
 
 [aws]
-format = '\[[($profile)]($style)\] '
+format = 'on [($profile )(\($region\) )]($style)'
 style = 'bold blue'
+symbol = '🅰 '
 [aws.region_aliases]
 eu-central-1 = 'eu'

@@ -238,7 +238,8 @@ live_config_reload: true
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
 shell:
-  program: /Users/evgenii/.cargo/bin/zellij
+  program: /Users/evgenii/.cargo/bin/nu
+
 
 # Windows 10 ConPTY backend (Windows only)
 #
