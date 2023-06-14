@@ -11,3 +11,5 @@ language-servers = [
 lint = true
 inlayHint.enable = true
 
+[language-server.ruff-lsp]
+command = "ruff-lsp"
