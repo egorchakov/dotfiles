@@ -41,7 +41,11 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
+  {{ if eq .chezmoi.os "darwin" -}}
   decorations: buttonless
+  {{ else if eq .chezmoi.os "linux" -}}
+  decoratins: none
+  {{ end -}}
 
   startup_mode: Maximized
 
@@ -238,7 +242,11 @@ live_config_reload: true
 #   - (Linux/macOS) /bin/bash --login
 #   - (Windows) powershell
 shell:
+  {{ if eq .chezmoi.os "darwin" -}}
   program: /Users/evgenii/.cargo/bin/nu
+  {{ else if eq .chezmoi.os "linux" -}}
+  program: nu
+  {{ end -}}
 
 
 # Windows 10 ConPTY backend (Windows only)
