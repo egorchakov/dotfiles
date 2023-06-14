@@ -1,20 +1,13 @@
 [[language]]
 name = "python"
 auto-format = true
+formatter = { command = "black", args = ["-", "-q"] }
+language-servers = [
+  { name = "pyright" },
+  { name = "ruff-lsp" },
+]
 
-[language.config]
-pylsp.plugins.ruff.enabled = true
-pylsp.plugins.black.enabled = true
-pylsp.plugins.rope.enabled = true
-pylsp.plugins.pylsp_mypy.enabled = true
-pylsp.plugins.pylsp_mypy.live_mode = true
-pylsp.plugins.pyls_isort.enabled = true
-
-pylsp.plugins.pylint.enabled = false
-pylsp.plugins.autopep8.enabled = false
-pylsp.plugins.yapf.enabled = false
-pylsp.plugins.mccabe.enabled = false
-pylsp.plugins.pycodestyle.enabled = false
-pylsp.plugins.pyflakes.enabled = false
-pylsp.plugins.flake8.enabled = false
+[language-server.pyright.config]
+lint = true
+inlayHint.enable = true
 
