@@ -297,7 +297,7 @@ let carapace_completer = {|spans|
 
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   ls: {
     use_ls_colors: true # use the LS_COLORS environment variable to colorize output
     clickable_links: true # enable or disable clickable links. Your terminal has to support links.
@@ -387,7 +387,7 @@ let-env config = {
     algorithm: "fuzzy"  # prefix or fuzzy
     external: {
       enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up my be very slow
-      max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
+      max_results: 1000 # setting it lower can improve completion performance at the cost of omitting some options
       completer: $carapace_completer # check 'carapace_completer' above as an example
     }
   }
