@@ -669,4 +669,4 @@ $env.config = {
 }
 
 source ~/.zoxide.nu
-source ~/.starship.nu
+use ~/.starship.nu

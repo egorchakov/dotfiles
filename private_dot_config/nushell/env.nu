@@ -17,7 +17,7 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.config-path | path dirname | path join 'plugins')
 ]
 
-$env.PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/.cargo/bin', '~/.pyenv/bin'])
+$env.PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/.cargo/bin', '~/.pyenv/bin', '/opt/homebrew/bin'])
 
 load-env (fnm env --shell bash | lines | str replace 'export ' '' | str replace -a '"' '' | split column = | rename name value | where name != "FNM_ARCH" and name != "PATH" | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value })
 
@@ -35,5 +35,5 @@ $env.PYTHON_KEYRING_BACKEND = 'keyring.backends.null.Keyring'
 $env.DOCKER_BUILDKIT = 1
 $env.COMPOSE_DOCKER_CLI_BUILD = 1
 
-zoxide init nushell | str replace --all 'let-env' '$env.' | save -f ~/.zoxide.nu
-starship init nu | str replace --all 'let-env' '$env.'| save -f ~/.starship.nu
+zoxide init nushell | save -f ~/.zoxide.nu
+starship init nu | save -f ~/.starship.nu
