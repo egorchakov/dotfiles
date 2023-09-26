@@ -1,0 +1,11 @@
+try:
+    %load_ext ipython_autoimport
+except ImportError:
+    print('unavailable: ipython_autoimport')
+
+try:
+    import lovely_tensors as lt
+except ImportError:
+    print('unavailable: lovely_tensors')
+else:
+    lt.monkey_patch()
