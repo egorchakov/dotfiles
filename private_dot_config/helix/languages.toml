@@ -17,3 +17,32 @@ inlayHint.enable = true
 
 [language-server.ruff-lsp]
 command = "ruff-lsp"
+
+[[language]]
+name = "yaml"
+scope = "source.ansible"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"]}
+file-types = ["yaml", "yml"]
+injection-regex = "yml|yaml"
+roots = [".ansible-lint", "ansible.cfg"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [{name = "ansible-language-server"}]
+
+[language-server.ansible-language-server]
+command = "ansible-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "yaml"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"]}
+file-types = ["yaml", "yml"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [{name = "yaml-language-server"}]
+
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]
