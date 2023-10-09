@@ -1,0 +1,7 @@
+set selection-clipboard clipboard
+set guioptions v
+set recolor true
+set recolor-keephue true
+set recolor-reverse-video true
+
+map <C-i> recolor
