@@ -43,3 +43,6 @@ starship init nu | save -f ~/.cache/starship/init.nu
 
 mkdir ~/.cache/carapace
 carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+mkdir ~/.cache/atuin
+atuin init nu | save -f ~/.cache/atuin/init.nu

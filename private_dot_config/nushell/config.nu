@@ -671,8 +671,10 @@ $env.config = {
 source ~/.cache/zoxide/init.nu
 source ~/.cache/starship/init.nu
 source ~/.cache/carapace/init.nu
+source ~/.cache/atuin/init.nu
 
 source ~/.local/share/nu_scripts/custom-completions/poetry/poetry-completions.nu
 source ~/.local/share/nu_scripts/custom-completions/zellij/zellij-completions.nu
 source ~/.local/share/nu_scripts/custom-completions/just/just-completions.nu
 source ~/.local/share/nu_scripts/custom-completions/git/git-completions.nu
+
