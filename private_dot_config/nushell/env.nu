@@ -27,7 +27,7 @@ alias zl = zellij
 alias ipy = ipython
 alias j = just
 alias av = aws-vault
-alias f = xplr
+alias f = yazi
 
 $env.EDITOR = 'hx'
 $env.PYTHONBREAKPOINT = 'pudb.set_trace'
