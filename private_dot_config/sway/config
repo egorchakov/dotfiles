@@ -1,4 +1,4 @@
-font pango: Iosevka Nerd Font Mono 16 
+font pango: Iosevka Light 16
 floating_modifier Mod1
 
 set $term kitty
@@ -11,10 +11,7 @@ bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 5
-bindsym Mod1+Space exec alacritty --class=launcher -e /usr/bin/sway-launcher-desktop
-bindsym Mod1+c exec rofi -show calc
-bindsym Mod1+p exec gopass-rofi
-bindsym Mod1+t exec --no-startup-id rofi-bluetooth
+bindsym Mod1+Space exec tofi-drun | xargs swaymsg exec --
 
 # change focus
 bindsym Mod1+h focus left
