@@ -36,7 +36,7 @@ $env.DOCKER_BUILDKIT = 1
 $env.COMPOSE_DOCKER_CLI_BUILD = 1
 
 mkdir ~/.cache/zoxide
-zoxide init nushell | save -f ~/.cache/zoxide/init.nu
+zoxide init nushell | str replace --all 'def-env' 'def --env' | save -f ~/.cache/zoxide/init.nu
 
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
