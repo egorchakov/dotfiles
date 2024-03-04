@@ -76,6 +76,8 @@ indent-for-nested-containers-with-the-same-orientation = 30
 # You can uncomment this line to open up terminal with alt + enter shortcut
 # See: https://nikitabobko.github.io/AeroSpace/commands.html#exec-and-forget
 alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~'
+alt-o = 'exec-and-forget /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alt-q = 'close'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands.html#layout
 alt-slash = 'layout tiles horizontal vertical'
