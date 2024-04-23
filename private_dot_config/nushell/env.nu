@@ -28,6 +28,7 @@ alias ipy = ipython
 alias j = just
 alias av = aws-vault
 alias f = yazi
+alias pt = poetry
 
 $env.EDITOR = 'hx'
 $env.PYTHONBREAKPOINT = 'pudb.set_trace'
