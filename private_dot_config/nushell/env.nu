@@ -29,6 +29,7 @@ alias j = just
 alias av = aws-vault
 alias f = yazi
 alias pt = poetry
+alias pts = poetry shell
 
 $env.EDITOR = 'hx'
 $env.PYTHONBREAKPOINT = 'pudb.set_trace'
