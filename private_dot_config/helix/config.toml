@@ -30,6 +30,9 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
+[keys.insert]
+esc = ["collapse_selection", "normal_mode"]
+
 [keys.normal]
 ";" = "command_mode"
 d = ["yank_joined_to_clipboard", "yank", "delete_selection"]
