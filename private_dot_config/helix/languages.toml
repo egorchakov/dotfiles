@@ -1,11 +1,42 @@
 [[language]]
 name = "python"
 auto-format = true
-formatter = { command = "ruff", args = ["format", "-"] }
-language-servers = [
-  { name = "pyright" },
-  { name = "ruff-lsp" },
-]
+language-servers = ["pyright", "ruff"]
+
+
+[[language]]
+name = "yaml"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+file-types = ["yaml", "yml"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [{ name = "yaml-language-server" }]
+
+
+[[language]]
+name = "yaml"
+scope = "source.ansible"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+file-types = ["yaml", "yml"]
+injection-regex = "yml|yaml"
+roots = [".ansible-lint", "ansible.cfg"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [{ name = "ansible-language-server" }]
+
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["format", "-"] }
+
+
+[[language]]
+name = "latex"
+language-servers = [{ name = "texlab" }]
+
 
 [language-server.pyright]
 command = "pyright-langserver"
@@ -15,43 +46,21 @@ args = ["--stdio"]
 lint = true
 inlayHint.enable = true
 
-[language-server.ruff-lsp]
-command = "ruff-lsp"
 
-[[language]]
-name = "yaml"
-scope = "source.ansible"
-auto-format = true
-formatter = { command = "prettier", args = ["--parser", "yaml"]}
-file-types = ["yaml", "yml"]
-injection-regex = "yml|yaml"
-roots = [".ansible-lint", "ansible.cfg"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = [{name = "ansible-language-server"}]
+[language-server.ruff]
+command = "ruff"
+args = ["server", "--preview"]
+
 
 [language-server.ansible-language-server]
 command = "ansible-language-server"
 args = ["--stdio"]
 
-[[language]]
-name = "yaml"
-auto-format = true
-formatter = { command = "prettier", args = ["--parser", "yaml"]}
-file-types = ["yaml", "yml"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = [{name = "yaml-language-server"}]
 
 [language-server.yaml-language-server]
 command = "yaml-language-server"
 args = ["--stdio"]
 
-[[language]]
-name = "latex"
-language-servers = [
-  { name = "texlab" }
-]
 
 [language-server.texlab]
 command = "texlab"
@@ -62,11 +71,7 @@ forwardSearchAfter = true
 
 [language-server.texlab.config.texlab.forwardSearch]
 executable = "zathura"
-args = [ "--synctex-forward", "%l:1:%f", "%p" ]
+args = ["--synctex-forward", "%l:1:%f", "%p"]
 
 [language-server.texlab.config.texlab.chktex]
 onEdit = true
-
-[[language]]
-name = "toml"
-auto-format = true
