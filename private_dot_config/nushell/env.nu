@@ -27,7 +27,6 @@ alias zl = zellij
 alias ipy = ipython
 alias j = just
 alias av = aws-vault
-alias f = yazi
 alias pt = poetry
 alias pts = poetry shell
 
@@ -48,3 +47,13 @@ carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
 
 mkdir ~/.cache/atuin
 atuin init nu | save -f ~/.cache/atuin/init.nu
+
+def --env f [...args] {
+	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+	yazi ...$args --cwd-file $tmp
+	let cwd = (open $tmp)
+	if $cwd != "" and $cwd != $env.PWD {
+		cd $cwd
+	}
+	rm -fp $tmp
+}
