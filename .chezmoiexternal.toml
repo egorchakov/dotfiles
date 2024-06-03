@@ -1,0 +1,7 @@
+[".config/yazi/plugins/fg.yazi"]
+type = "git-repo"
+url = "https://github.com/DreamMaoMao/fg.yazi.git"
+
+[".config/yazi/plugins/starship.yazi"]
+type = "git-repo"
+url = "https://github.com/Rolv-Apneseth/starship.yazi.git"
