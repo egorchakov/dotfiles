@@ -1,11 +1,11 @@
-{{ if eq .chezmoi.os "darwin" - }}
+{{- if eq .chezmoi.os "darwin" }}
 shell /Users/evgenii/.cargo/bin/nu
 macos_quit_when_last_window_closed yes
 macos_titlebar_color background
-{{ else if eq chezmoi.os "linux" - }}
+{{- else if eq chezmoi.os "linux" }}
 shell nu
 linux_display_server wayland
-{{ end - }}
+{{- end }}
 
 editor hx
 
