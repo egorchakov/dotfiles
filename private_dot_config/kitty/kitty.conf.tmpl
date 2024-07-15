@@ -1,4 +1,12 @@
+{{ if eq .chezmoi.os "darwin" - }}
 shell /Users/evgenii/.cargo/bin/nu
+macos_quit_when_last_window_closed yes
+macos_titlebar_color background
+{{ else if eq chezmoi.os "linux" - }}
+shell nu
+linux_display_server wayland
+{{ end - }}
+
 editor hx
 
 font_family Iosevka Fixed Extralight 
@@ -13,8 +21,3 @@ input_delay 1
 enable_audio_bell no
 hide_window_decorations no
 shell_integration enabled
-
-linux_display_server wayland
-
-macos_quit_when_last_window_closed yes
-macos_titlebar_color background
