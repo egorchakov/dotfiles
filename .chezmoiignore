@@ -1,0 +1,14 @@
+{{- if ne .chezmoi.hostname "arch" }}
+
+.config/sway
+.config/swaylock
+.config/waybar
+.config/zathura
+
+{{- end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+
+.config/aerospace
+
+{{ end }}
