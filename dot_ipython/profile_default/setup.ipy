@@ -9,3 +9,8 @@ except ImportError:
     print('unavailable: lovely_tensors')
 else:
     lt.monkey_patch()
+
+try:
+    import wat as w
+except ImportError:
+    print('unavailable: wat')
