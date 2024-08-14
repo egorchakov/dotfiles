@@ -1,8 +1,7 @@
 [[language]]
 name = "python"
 auto-format = true
-language-servers = ["pyright", "ruff"]
-
+language-servers = ["basedpyright", "pyright", "ruff"]
 
 [[language]]
 name = "yaml"
@@ -12,7 +11,6 @@ file-types = ["yaml", "yml"]
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 language-servers = [{ name = "yaml-language-server" }]
-
 
 [[language]]
 name = "yaml"
@@ -26,17 +24,22 @@ comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 language-servers = [{ name = "ansible-language-server" }]
 
-
 [[language]]
 name = "toml"
 auto-format = true
 formatter = { command = "taplo", args = ["format", "-"] }
 
-
 [[language]]
 name = "latex"
 language-servers = [{ name = "texlab" }]
 
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+
+[language-server.basedpyright.config]
+lint = true
+inlayHint.enable = true
 
 [language-server.pyright]
 command = "pyright-langserver"
@@ -46,21 +49,17 @@ args = ["--stdio"]
 lint = true
 inlayHint.enable = true
 
-
 [language-server.ruff]
 command = "ruff"
 args = ["server", "--preview"]
-
 
 [language-server.ansible-language-server]
 command = "ansible-language-server"
 args = ["--stdio"]
 
-
 [language-server.yaml-language-server]
 command = "yaml-language-server"
 args = ["--stdio"]
-
 
 [language-server.texlab]
 command = "texlab"
