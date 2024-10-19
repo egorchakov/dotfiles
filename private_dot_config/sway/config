@@ -140,8 +140,8 @@ client.urgent           #2f343a #900000 #ffffff #900000
 
 
 input type:keyboard {
-#    xkb_options "ctrl:nocaps,grp:lwin_toggle"
-    xkb_options "ctrl:nocaps"
+    xkb_options "ctrl:nocaps,grp:lwin_toggle"
+#    xkb_options "ctrl:nocaps"
     xkb_layout "us,ru"
     repeat_delay 150
     repeat_rate 150
