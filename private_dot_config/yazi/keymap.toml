@@ -1,25 +1,45 @@
 [[manager.prepend_keymap]]
-on   = [ "c", "m" ]
-run  = "plugin chmod"
+on = ["c", "m"]
+run = "plugin chmod"
 desc = "Chmod on selected files"
 
 [[manager.prepend_keymap]]
-on   = "T"
-run  = "plugin --sync max-preview"
+on = "T"
+run = "plugin --sync max-preview"
 desc = "Maximize or restore preview"
 
 [[manager.prepend_keymap]]
-on   = "F"
-run  = "plugin smart-filter"
+on = "F"
+run = "plugin smart-filter"
 desc = "Smart filter"
 
 [[manager.prepend_keymap]]
-on   = "<C-d>"
-run  = "plugin diff"
+on = "<C-d>"
+run = "plugin diff"
 desc = "Diff the selected with the hovered file"
 
 [[manager.prepend_keymap]]
-on  = "<C-n>"
+on = "<C-n>"
 run = '''
 	shell 'dragon-drop -x -i -T "$1"' --confirm
 '''
+
+[[manager.prepend_keymap]]
+on = ["f", "g"]
+run = "plugin fg"
+desc = "find by content (fzf)"
+
+[[manager.prepend_keymap]]
+on = ["f", "G"]
+run = "plugin fg --args='rg'"
+desc = "find by content (rg)"
+
+[[manager.prepend_keymap]]
+on = ["f", "a"]
+run = "plugin fg --args='rga'"
+desc = "find by content (rga)"
+
+[[manager.prepend_keymap]]
+on = ["f", "f"]
+run = "plugin fg --args='fzf'"
+desc = "find by filename"
