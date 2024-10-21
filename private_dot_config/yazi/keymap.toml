@@ -25,17 +25,7 @@ run = '''
 '''
 
 [[manager.prepend_keymap]]
-on = ["f", "g"]
-run = "plugin fg"
-desc = "find by content (fzf)"
-
-[[manager.prepend_keymap]]
-on = ["f", "G"]
-run = "plugin fg --args='rg'"
-desc = "find by content (rg)"
-
-[[manager.prepend_keymap]]
-on = ["f", "a"]
+on = ["f", "c"]
 run = "plugin fg --args='rga'"
 desc = "find by content (rga)"
 
