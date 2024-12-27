@@ -1,0 +1,16 @@
+shell-integration = none
+initial-command = nu
+command = nu
+
+window-inherit-working-directory = true
+window-decoration = false
+
+font-size = 20
+font-family = Iosevka Fixed
+font-style = Light
+font-style-bold = Medium
+font-style-italic = Light Oblique
+font-style-bold-italic = Thin Oblique
+theme = Wez
+
+focus-follows-mouse = true
