@@ -1,7 +1,7 @@
 font pango: Iosevka Light 16
 floating_modifier Mod1
 
-set $term kitty
+set $term ghostty
 bindsym Mod1+Return exec $term
 
 bindsym Mod1+q kill

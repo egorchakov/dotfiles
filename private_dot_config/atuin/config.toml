@@ -17,10 +17,10 @@
 # dialect = "us"
 
 ## enable or disable automatic sync
-# auto_sync = true
+auto_sync = false
 
 ## enable or disable automatic update checks
-# update_check = true
+update_check = false
 
 ## address of the sync server
 # sync_address = "https://api.atuin.sh"
@@ -33,6 +33,7 @@
 ## which search mode to use
 ## possible values: prefix, fulltext, fuzzy, skim
 search_mode = "skim"
+search_mode_shell_up_key_binding = "skim"
 
 ## which filter mode to use
 ## possible values: global, host, session, directory
@@ -72,7 +73,7 @@ show_preview = true
 
 ## use ctrl instead of alt as the shortcut modifier key for numerical UI shortcuts
 ## alt-0 .. alt-9
-# ctrl_n_shortcuts = false
+ctrl_n_shortcuts = false
 
 ## prevent commands matching any of these regexes from being written to history.
 ## Note that these regular expressions are unanchored, i.e. if they don't start
@@ -94,4 +95,4 @@ show_preview = true
 # ]
 
 keymap_mode = "vim-insert"
-prefers_reduced_motion = "true"
+
