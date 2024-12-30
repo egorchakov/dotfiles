@@ -42,11 +42,11 @@ default-root-container-orientation = 'auto'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide.html#assign-workspaces-to-monitors
 gaps.inner.horizontal = 0
-gaps.inner.vertical =   0
-gaps.outer.left =       0
-gaps.outer.bottom =     0
-gaps.outer.top =        0
-gaps.outer.right =      0
+gaps.inner.vertical = 0
+gaps.outer.left = 0
+gaps.outer.bottom = 0
+gaps.outer.top = 0
+gaps.outer.right = 0
 
 
 # 'main' binding mode declaration
@@ -71,9 +71,9 @@ gaps.outer.right =      0
 
 # You can uncomment this line to open up terminal with alt + enter shortcut
 # See: https://nikitabobko.github.io/AeroSpace/commands.html#exec-and-forget
-alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~'
+alt-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
 alt-o = 'exec-and-forget /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alt-q = 'close'
+alt-q = 'close --quit-if-last-window'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands.html#layout
 alt-slash = 'layout tiles horizontal vertical'
@@ -133,7 +133,10 @@ alt-shift-slash = 'mode join'
 [mode.service.binding]
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 esc = ['reload-config', 'mode main']
 

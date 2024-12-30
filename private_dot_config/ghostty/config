@@ -4,6 +4,7 @@ command = nu
 
 window-inherit-working-directory = true
 window-decoration = false
+macos-titlebar-style = hidden
 
 font-size = 20
 font-family = Iosevka Fixed
