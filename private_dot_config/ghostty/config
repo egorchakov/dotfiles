@@ -8,10 +8,6 @@ macos-titlebar-style = hidden
 
 font-size = 20
 font-family = Iosevka Fixed
-font-style = Light
-font-style-bold = Medium
-font-style-italic = Light Oblique
-font-style-bold-italic = Thin Oblique
-theme = Wez
+theme = UltraDark
 
 focus-follows-mouse = true
