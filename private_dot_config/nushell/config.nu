@@ -665,5 +665,4 @@ source ~/.cache/atuin/init.nu
 
 source ~/.local/share/nu_scripts/custom-completions/zellij/zellij-completions.nu
 source ~/.local/share/nu_scripts/custom-completions/git/git-completions.nu
-source ~/.local/share/nu_scripts/modules/fnm/fnm.nu
 
