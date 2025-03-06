@@ -11,7 +11,7 @@ $env.ENV_CONVERSIONS = {
 
 $env.NU_LIB_DIRS = [ ($nu.config-path | path dirname | path join 'scripts') ]
 $env.NU_PLUGIN_DIRS = [ ($nu.config-path | path dirname | path join 'plugins') ]
-$env.PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/.cargo/bin', '~/.rye/shims', '/opt/homebrew/bin', '/usr/local/go/bin', '/usr/local/bin'])
+$env.PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/.cargo/bin', '~/.go/bin', '/opt/homebrew/bin', '/usr/local/go/bin', '/usr/local/bin'])
 $env.EDITOR = 'hx'
 $env.PYTHONBREAKPOINT = 'pudb.set_trace'
 $env.PYTHON_KEYRING_BACKEND = 'keyring.backends.null.Keyring'
