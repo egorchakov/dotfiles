@@ -4,30 +4,14 @@ auto-format = true
 language-servers = ["basedpyright", "pyright", "ruff"]
 
 [[language]]
-name = "yaml"
-auto-format = true
-formatter = { command = "prettier", args = ["--parser", "yaml"] }
-file-types = ["yaml", "yml"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = [{ name = "yaml-language-server" }]
-
-[[language]]
-name = "yaml"
-scope = "source.ansible"
-auto-format = true
-formatter = { command = "prettier", args = ["--parser", "yaml"] }
-file-types = ["yaml", "yml"]
-injection-regex = "yml|yaml"
-roots = [".ansible-lint", "ansible.cfg"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = [{ name = "ansible-language-server" }]
-
-[[language]]
 name = "toml"
 auto-format = true
-formatter = { command = "taplo", args = ["format", "-"] }
+formatter = { command = "dprint", args = ["fmt", "--stdin", "toml"] }
+
+[[language]]
+name = "yaml"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "yaml"] }
+auto-format = true
 
 [[language]]
 name = "latex"
@@ -52,14 +36,6 @@ inlayHint.enable = true
 [language-server.ruff]
 command = "ruff"
 args = ["server", "--preview"]
-
-[language-server.ansible-language-server]
-command = "ansible-language-server"
-args = ["--stdio"]
-
-[language-server.yaml-language-server]
-command = "yaml-language-server"
-args = ["--stdio"]
 
 [language-server.texlab]
 command = "texlab"
