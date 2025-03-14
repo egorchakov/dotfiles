@@ -1,35 +1,11 @@
-[[manager.prepend_keymap]]
-on = ["c", "m"]
-run = "plugin chmod"
-desc = "Chmod on selected files"
-
-[[manager.prepend_keymap]]
-on = "T"
-run = "plugin --sync max-preview"
-desc = "Maximize or restore preview"
-
-[[manager.prepend_keymap]]
-on = "F"
-run = "plugin smart-filter"
-desc = "Smart filter"
-
-[[manager.prepend_keymap]]
-on = "<C-d>"
-run = "plugin diff"
-desc = "Diff the selected with the hovered file"
-
-[[manager.prepend_keymap]]
-on = "<C-n>"
-run = '''
-	shell 'dragon-drop -x -i -T "$1"' --confirm
-'''
-
-[[manager.prepend_keymap]]
-on = ["f", "c"]
-run = "plugin fg --args='rga'"
-desc = "find by content (rga)"
-
-[[manager.prepend_keymap]]
-on = ["f", "f"]
-run = "plugin fg --args='fzf'"
-desc = "find by filename"
+[manager]
+prepend_keymap = [
+  { on = ["c", "m"], run = "plugin chmod", desc = "chmod" },
+  { on = "T", run = "plugin --sync max-preview", desc = "Maximize or restore preview" },
+  { on = "F", run = "plugin smart-filter", desc = "Smart filter" },
+  { on = "<C-d>", run = "plugin diff", desc = "Diff the selected with the hovered file" },
+  { on = ["f", "c"], run = "plugin fg --args='rga'", desc = "find by content" },
+  { on = ["f", "f"], run = "plugin fg --args='rga'", desc = "find by filename" },
+  { on = "l", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+  { on = ["g", "c"], run = "plugin vcs-files", desc = "show git changes" },
+]
