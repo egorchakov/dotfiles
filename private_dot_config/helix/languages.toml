@@ -10,8 +10,13 @@ formatter = { command = "dprint", args = ["fmt", "--stdin", "toml"] }
 
 [[language]]
 name = "yaml"
-formatter = { command = "dprint", args = ["fmt", "--stdin", "yaml"] }
 auto-format = true
+formatter = { command = "dprint", args = ["fmt", "--stdin", "yaml"] }
+
+[[language]]
+name = "json"
+auto-format = true
+formatter = { command = "dprint", args = ["fmt", "--stdin", "json"] }
 
 [[language]]
 name = "latex"
