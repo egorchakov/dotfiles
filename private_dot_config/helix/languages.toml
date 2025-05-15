@@ -1,7 +1,7 @@
 [[language]]
 name = "python"
 auto-format = true
-language-servers = ["basedpyright", "pyright", "ruff"]
+language-servers = ["basedpyright", "ty", "ruff"]
 
 [[language]]
 name = "toml"
@@ -19,6 +19,11 @@ auto-format = true
 formatter = { command = "dprint", args = ["fmt", "--stdin", "json"] }
 
 [[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "dprint", args = ["fmt", "--stdin", "markdown"] }
+
+[[language]]
 name = "latex"
 language-servers = [{ name = "texlab" }]
 
@@ -30,17 +35,13 @@ args = ["--stdio"]
 lint = true
 inlayHint.enable = true
 
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
-
-[language-server.pyright.config]
-lint = true
-inlayHint.enable = true
-
 [language-server.ruff]
 command = "ruff"
 args = ["server", "--preview"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
 
 [language-server.texlab]
 command = "texlab"

@@ -658,10 +658,10 @@ $env.config = {
   ]
 }
 
-source ~/.cache/zoxide/init.nu
-source ~/.cache/starship/init.nu
-source ~/.cache/carapace/init.nu
-source ~/.cache/atuin/init.nu
+source (if ("~/.cache/zoxide/init.nu" | path expand | path exists) {"~/.cache/zoxide/init.nu"} else {null})
+source (if ("~/.cache/starship/init.nu" | path expand | path exists) {"~/.cache/starship/init.nu"} else {null})
+source (if ("~/.cache/carapace/init.nu" | path expand | path exists) {"~/.cache/carapace/init.nu"} else {null})
+source (if ("~/.cache/atuin/init.nu" | path expand | path exists) {"~/.cache/atuin/init.nu"} else {null})
 
 source ~/.local/share/nu_scripts/custom-completions/zellij/zellij-completions.nu
 source ~/.local/share/nu_scripts/custom-completions/git/git-completions.nu
