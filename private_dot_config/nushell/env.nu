@@ -19,7 +19,7 @@ $env.DYLD_LIBRARY_PATH = "/opt/homebrew/lib/"
 
 if (which zoxide | is-not-empty) {
   mkdir ~/.cache/zoxide
-  zoxide init nushell | str replace --all 'def-env' 'def --env' | save -f ~/.cache/zoxide/init.nu
+  zoxide init nushell | save -f ~/.cache/zoxide/init.nu
 }
 
 if (which starship | is-not-empty) {
