@@ -1,7 +1,7 @@
 [[language]]
 name = "python"
 auto-format = true
-language-servers = ["basedpyright", "ty", "ruff"]
+language-servers = ["basedpyright", "ruff", "ty", "pyrefly"]
 
 [[language]]
 name = "toml"
@@ -42,6 +42,10 @@ args = ["server", "--preview"]
 [language-server.ty]
 command = "ty"
 args = ["server"]
+
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]
 
 [language-server.texlab]
 command = "texlab"

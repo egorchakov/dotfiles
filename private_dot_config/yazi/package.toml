@@ -1,12 +1,12 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "a1738e8"
-hash = "1f3dad061209081a6b04dd6ff2cb06c7"
+rev = "2ad42fa"
+hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "a1738e8"
-hash = "2f1053f89d1a301a648ab181d0948e38"
+rev = "2ad42fa"
+hash = "1adc12c2b2b025411ab61eb8f0879574"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:max-preview"

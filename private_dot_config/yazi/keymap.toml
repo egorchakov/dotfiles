@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 prepend_keymap = [
   { on = ["c", "m"], run = "plugin chmod", desc = "chmod" },
   { on = "T", run = "plugin --sync max-preview", desc = "Maximize or restore preview" },
