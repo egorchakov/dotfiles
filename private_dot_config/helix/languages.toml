@@ -6,7 +6,6 @@ language-servers = ["basedpyright", "ruff", "ty", "pyrefly"]
 [[language]]
 name = "toml"
 auto-format = true
-formatter = { command = "dprint", args = ["fmt", "--stdin", "toml"] }
 
 [[language]]
 name = "yaml"
