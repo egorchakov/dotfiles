@@ -1,7 +1,12 @@
 [[language]]
 name = "python"
 auto-format = true
-language-servers = ["basedpyright", "ruff", "ty", "pyrefly"]
+language-servers = [
+  "basedpyright",
+  "ruff",
+  # "ty",
+  # "pyrefly",
+]
 
 [[language]]
 name = "toml"

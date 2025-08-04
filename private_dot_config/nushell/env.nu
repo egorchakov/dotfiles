@@ -15,7 +15,7 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend ['~/.local/bin', '~/.ca
 $env.EDITOR = 'hx'
 $env.PYTHONBREAKPOINT = 'pudb.set_trace'
 $env.PYTHON_KEYRING_BACKEND = 'keyring.backends.null.Keyring'
-$env.DYLD_LIBRARY_PATH = "/opt/homebrew/lib/"
+$env.DYLD_FALLBACK_LIBRARY_PATH = "/opt/homebrew/lib/"
 
 if (which zoxide | is-not-empty) {
   mkdir ~/.cache/zoxide
