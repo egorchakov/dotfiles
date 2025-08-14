@@ -31,6 +31,12 @@ formatter = { command = "dprint", args = ["fmt", "--stdin", "markdown"] }
 name = "latex"
 language-servers = [{ name = "texlab" }]
 
+[[language]]
+name = "cpp"
+auto-format = true
+language-servers = ["clangd"]
+roots = [".git", "CMakeLists.txt"]
+
 [language-server.basedpyright]
 command = "basedpyright-langserver"
 args = ["--stdio"]
@@ -64,3 +70,7 @@ args = ["--synctex-forward", "%l:1:%f", "%p"]
 
 [language-server.texlab.config.texlab.chktex]
 onEdit = true
+
+[language-server.clangd]
+command = "clangd"
+args = ["--enable-config"]
